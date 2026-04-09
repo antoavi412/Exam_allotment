@@ -1,0 +1,107 @@
+.seating-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seating-container h2 {
+  color: #001f3f;
+  margin-bottom: 20px;
+}
+
+.controls {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.controls select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.controls button:hover {
+  background-color: #357abd;
+}
+
+.controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.seating-display {
+  display: grid;
+  gap: 30px;
+}
+
+.hall-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hall-section h3 {
+  color: #001f3f;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #001f3f;
+  padding-bottom: 10px;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.seat-box {
+  border: 2px solid #001f3f;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(to bottom, #f9f9f9, #fff);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.seat-box:hover {
+  background: #e8f0f7;
+  border-color: #4a90e2;
+}
+
+.seat-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #001f3f;
+  margin-bottom: 5px;
+}
+
+.student-name {
+  font-size: 12px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.student-roll {
+  font-size: 11px;
+  color: #666;
+}
