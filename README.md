@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Exam Seating Arrangement & Invigilator Allocation System
 
 A full-stack system for automatic exam seating arrangement and fair invigilator allocation using smart algorithms.
@@ -143,3 +144,6 @@ Configured to allow requests from `http://localhost:5173` (React frontend).
 ## 📄 License
 Academic use only
 
+=======
+# Exam_allotment
+>>>>>>> 36a8d4172f80d479a95af7fe846afa2e5675274c
