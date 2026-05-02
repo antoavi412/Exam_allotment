@@ -35,5 +35,3 @@ setup.ps1
 start-all.bat
 start-backend.bat
 start-frontend.bat
-src/
-pom.xml
