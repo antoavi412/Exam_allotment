@@ -1,10 +1,9 @@
 -- Create database
-
-USE exam_allotment;
+CREATE DATABASE IF NOT EXISTS exam_allotment;
 
 -- Students table
 CREATE TABLE IF NOT EXISTS students (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   student_name VARCHAR(100) NOT NULL,
   roll_number VARCHAR(20) UNIQUE NOT NULL,
   department VARCHAR(50) NOT NULL,
@@ -13,16 +12,16 @@ CREATE TABLE IF NOT EXISTS students (
 
 -- Exam Halls table
 CREATE TABLE IF NOT EXISTS halls (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   hall_name VARCHAR(50) NOT NULL,
   capacity INT NOT NULL,
-   row_count INT NOT NULL,
-   col_count INT NOT NULL
+  row_count INT NOT NULL,
+  col_count INT NOT NULL
 );
 
 -- Invigilators table
 CREATE TABLE IF NOT EXISTS invigilators (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   invigilator_name VARCHAR(100) NOT NULL,
   department VARCHAR(50) NOT NULL,
   assigned_count INT DEFAULT 0
@@ -30,7 +29,7 @@ CREATE TABLE IF NOT EXISTS invigilators (
 
 -- Exams table
 CREATE TABLE IF NOT EXISTS exams (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   subject_name VARCHAR(100) NOT NULL,
   exam_date DATE NOT NULL,
   exam_time VARCHAR(20) NOT NULL,
@@ -40,7 +39,7 @@ CREATE TABLE IF NOT EXISTS exams (
 
 -- Seating Arrangement table
 CREATE TABLE IF NOT EXISTS seating (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   exam_id INT NOT NULL,
   student_id INT NOT NULL,
   hall_id INT NOT NULL,
@@ -52,7 +51,7 @@ CREATE TABLE IF NOT EXISTS seating (
 
 -- Invigilator Allocation table
 CREATE TABLE IF NOT EXISTS invigilator_allocation (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   exam_id INT NOT NULL,
   hall_id INT NOT NULL,
   invigilator_id INT NOT NULL,

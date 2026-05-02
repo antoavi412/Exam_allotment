@@ -3,25 +3,25 @@ USE exam_seating;
 
 -- Students Table
 CREATE TABLE IF NOT EXISTS students (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   student_name VARCHAR(100),
   roll_number VARCHAR(20) UNIQUE,
   department VARCHAR(50),
   semester INT
 );
 
--- Exam Halls (with backticks for reserved words)
+-- Exam Halls (row_count and col_count instead of backtick-quoted names)
 CREATE TABLE IF NOT EXISTS halls (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   hall_name VARCHAR(50),
   capacity INT,
-  `rows` INT,
-  `columns` INT
+  row_count INT,
+  col_count INT
 );
 
 -- Invigilators
 CREATE TABLE IF NOT EXISTS invigilators (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   invigilator_name VARCHAR(100),
   department VARCHAR(50),
   assigned_count INT DEFAULT 0
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS invigilators (
 
 -- Exams
 CREATE TABLE IF NOT EXISTS exams (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   subject_name VARCHAR(100),
   exam_date DATE,
   exam_time VARCHAR(20),
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS exams (
 
 -- Seating Arrangement
 CREATE TABLE IF NOT EXISTS seating (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   exam_id INT,
   student_id INT,
   hall_id INT,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS seating (
 
 -- Invigilator Allocation
 CREATE TABLE IF NOT EXISTS invigilator_allocation (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   exam_id INT,
   hall_id INT,
   invigilator_id INT,
@@ -68,8 +68,8 @@ INSERT INTO students (student_name, roll_number, department, semester) VALUES
 ('Neha Verma', 'ECE002', 'ECE', 4),
 ('Vikram Sharma', 'MECH001', 'MECH', 4);
 
--- Sample Data - Halls (with backticks)
-INSERT INTO halls (hall_name, capacity, `rows`, `columns`) VALUES
+-- Sample Data - Halls (updated to use row_count and col_count)
+INSERT INTO halls (hall_name, capacity, row_count, col_count) VALUES
 ('Hall A', 6, 2, 3),
 ('Hall B', 6, 2, 3);
 
