@@ -1,6 +1,5 @@
 # Backend
 target/
-!target/exam-seating-1.0.0.jar
 .classpath
 .factorypath
 .project
@@ -9,6 +8,7 @@ target/
 .sts4-cache
 bin/
 *.class
+*.jar
 *.war
 *.nar
 *.ear
@@ -45,3 +45,4 @@ yarn-error.log*
 # Environment
 .env
 .env.local
+
