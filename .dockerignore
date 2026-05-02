@@ -6,14 +6,16 @@
 .springBeans
 .sts4-cache
 *.log
-*.jar
 *.war
 *.nar
 *.ear
 *.zip
 *.tar.gz
 *.rar
-target/
+target/*/
+target/classes/
+target/maven*/
+target/surefire*/
 .DS_Store
 .env
 .env.local
@@ -33,3 +35,5 @@ setup.ps1
 start-all.bat
 start-backend.bat
 start-frontend.bat
+src/
+pom.xml

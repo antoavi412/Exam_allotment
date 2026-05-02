@@ -1,5 +1,6 @@
 # Backend
 target/
+!target/exam-seating-1.0.0.jar
 .classpath
 .factorypath
 .project
