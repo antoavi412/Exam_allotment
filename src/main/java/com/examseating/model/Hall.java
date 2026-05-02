@@ -9,6 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Hall {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -16,10 +17,9 @@ public class Hall {
     private String hallName;
     private Integer capacity;
 
-    @Column(name = "`rows`")
+    @Column(name = "row_count")
     private Integer rows;
 
-    @Column(name = "`columns`")
+    @Column(name = "col_count")
     private Integer columns;
 }
-

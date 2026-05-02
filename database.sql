@@ -1,6 +1,6 @@
 -- Create database
-CREATE DATABASE IF NOT EXISTS exam_seating;
-USE exam_seating;
+
+USE exam_allotment;
 
 -- Students table
 CREATE TABLE IF NOT EXISTS students (
@@ -16,8 +16,8 @@ CREATE TABLE IF NOT EXISTS halls (
   id INT AUTO_INCREMENT PRIMARY KEY,
   hall_name VARCHAR(50) NOT NULL,
   capacity INT NOT NULL,
-   row_count NOT NULL,
-   col_count NOT NULL
+   row_count INT NOT NULL,
+   col_count INT NOT NULL
 );
 
 -- Invigilators table
@@ -72,7 +72,7 @@ INSERT INTO students (student_name, roll_number, department, semester) VALUES
 ('Eve Davis', 'CSE003', 'CSE', 6),
 ('Frank Miller', 'ECE003', 'ECE', 6);
 
-INSERT INTO halls (hall_name, capacity, rows, columns) VALUES
+INSERT INTO halls (hall_name, capacity, row_count, col_count) VALUES
 ('Hall A', 12, 3, 4),
 ('Hall B', 12, 3, 4);
 
