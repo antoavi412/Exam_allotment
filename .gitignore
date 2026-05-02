@@ -9,7 +9,6 @@ target/
 .sts4-cache
 bin/
 *.class
-*.jar
 *.war
 *.nar
 *.ear
