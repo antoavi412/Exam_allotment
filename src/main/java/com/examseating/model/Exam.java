@@ -19,4 +19,12 @@ public class Exam {
     private String examTime;
     private String department;
     private Integer semester;
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 }

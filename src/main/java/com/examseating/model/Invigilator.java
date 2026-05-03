@@ -16,4 +16,28 @@ public class Invigilator {
     private String invigilatorName;
     private String department;
     private Integer assignedCount = 0;
+
+    public String getName() {
+        return invigilatorName;
+    }
+
+    public void setName(String name) {
+        this.invigilatorName = name;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public Integer getAssignedCount() {
+        return assignedCount != null ? assignedCount : 0;
+    }
+
+    public void setAssignedCount(Integer count) {
+        this.assignedCount = count;
+    }
 }

@@ -20,4 +20,12 @@ public class Student {
 
     private String department;
     private Integer semester;
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 }

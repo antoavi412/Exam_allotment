@@ -24,4 +24,28 @@ public class InvigilatorAllocation {
     @ManyToOne
     @JoinColumn(name = "invigilator_id", nullable = false)
     private Invigilator invigilator;
+
+    public Exam getExam() {
+        return exam;
+    }
+
+    public void setExam(Exam exam) {
+        this.exam = exam;
+    }
+
+    public Hall getHall() {
+        return hall;
+    }
+
+    public void setHall(Hall hall) {
+        this.hall = hall;
+    }
+
+    public Invigilator getInvigilator() {
+        return invigilator;
+    }
+
+    public void setInvigilator(Invigilator invigilator) {
+        this.invigilator = invigilator;
+    }
 }
